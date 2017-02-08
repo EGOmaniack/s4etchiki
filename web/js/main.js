@@ -54,9 +54,18 @@ $(function(){
          $.post( "/ajax/get.php", function( data ) {
             //alert( "Data Loaded: " + data );
             s4data = JSON.parse(data);
+            //alert(s4data.length);
             //alert(s4data);
         });
 
+        //post еще не вернул ничего
+        var light_day_array = [];
+        //Вытащить данные для первого графика
+        for(i=0;i<s4data.length; i++)
+        {
+            light_day_array = [i, s4data[i].light_day];
+        }
+        //alert(light_day_array);
 
     var width = 1000;
     var height = 550;
