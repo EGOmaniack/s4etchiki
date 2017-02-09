@@ -1,0 +1,271 @@
+[{
+    "id": "125",
+    "date": "09-02-2017",
+    "light_day": "6120.25",
+    "light_night": "1986.56",
+    "kichen_water_c": "61.167",
+    "kichen_water_h": "68.239",
+    "bath_water_c": "270.782",
+    "bath_water_h": "177.536"
+}, {
+    "id": "124",
+    "date": "07-02-2017",
+    "light_day": "6110.67",
+    "light_night": "1984.47",
+    "kichen_water_c": "61.089",
+    "kichen_water_h": "68.076",
+    "bath_water_c": "270.495",
+    "bath_water_h": "177.311"
+}, {
+    "id": "123",
+    "date": "06-02-2017",
+    "light_day": "6105.06",
+    "light_night": "1983.26",
+    "kichen_water_c": "61.047",
+    "kichen_water_h": "68.007",
+    "bath_water_c": "270.325",
+    "bath_water_h": "177.21"
+}, {
+    "id": "122",
+    "date": "04-02-2017",
+    "light_day": "6095.04",
+    "light_night": "1981.04",
+    "kichen_water_c": "60.975",
+    "kichen_water_h": "67.843",
+    "bath_water_c": "270.057",
+    "bath_water_h": "176.992"
+}, {
+    "id": "115",
+    "date": "03-02-2017",
+    "light_day": "6090.5",
+    "light_night": "1979.38",
+    "kichen_water_c": "60.95",
+    "kichen_water_h": "67.784",
+    "bath_water_c": "269.927",
+    "bath_water_h": "176.815"
+}, {
+    "id": "114",
+    "date": "02-02-2017",
+    "light_day": "6083.53",
+    "light_night": "1978.11",
+    "kichen_water_c": "60.921",
+    "kichen_water_h": "67.734",
+    "bath_water_c": "269.768",
+    "bath_water_h": "176.751"
+}, {
+    "id": "113",
+    "date": "01-02-2017",
+    "light_day": "6077.87",
+    "light_night": "1976.65",
+    "kichen_water_c": "60.896",
+    "kichen_water_h": "67.682",
+    "bath_water_c": "269.613",
+    "bath_water_h": "176.628"
+}, {
+    "id": "112",
+    "date": "31-01-2017",
+    "light_day": "6072.5",
+    "light_night": "1975.62",
+    "kichen_water_c": "60.872",
+    "kichen_water_h": "67.6",
+    "bath_water_c": "269.434",
+    "bath_water_h": "176.521"
+}, {
+    "id": "111",
+    "date": "30-01-2017",
+    "light_day": "6067.54",
+    "light_night": "1974.58",
+    "kichen_water_c": "60.848",
+    "kichen_water_h": "67.559",
+    "bath_water_c": "269.261",
+    "bath_water_h": "176.452"
+}, {
+    "id": "110",
+    "date": "29-01-2017",
+    "light_day": "6063",
+    "light_night": "1973.51",
+    "kichen_water_c": "60.809",
+    "kichen_water_h": "67.465",
+    "bath_water_c": "269.112",
+    "bath_water_h": "176.358"
+}, {
+    "id": "109",
+    "date": "28-01-2017",
+    "light_day": "6057.37",
+    "light_night": "1972.35",
+    "kichen_water_c": "60.774",
+    "kichen_water_h": "67.409",
+    "bath_water_c": "268.969",
+    "bath_water_h": "176.217"
+}, {
+    "id": "108",
+    "date": "27-01-2017",
+    "light_day": "6055.37",
+    "light_night": "1971.815",
+    "kichen_water_c": "60.7595",
+    "kichen_water_h": "67.385",
+    "bath_water_c": "268.8975",
+    "bath_water_h": "176.1825"
+}, {
+    "id": "107",
+    "date": "26-01-2017",
+    "light_day": "6053.37",
+    "light_night": "1971.28",
+    "kichen_water_c": "60.745",
+    "kichen_water_h": "67.361",
+    "bath_water_c": "268.826",
+    "bath_water_h": "176.148"
+}, {
+    "id": "106",
+    "date": "25-01-2017",
+    "light_day": "6048.4",
+    "light_night": "1970.25",
+    "kichen_water_c": "60.71",
+    "kichen_water_h": "67.315",
+    "bath_water_c": "268.657",
+    "bath_water_h": "176.078"
+}, {
+    "id": "105",
+    "date": "24-01-2017",
+    "light_day": "6039.47",
+    "light_night": "1968.2",
+    "kichen_water_c": "60.651",
+    "kichen_water_h": "67.207",
+    "bath_water_c": "268.415",
+    "bath_water_h": "175.919"
+}, {
+    "id": "104",
+    "date": "23-01-2017",
+    "light_day": "6035.3",
+    "light_night": "1967.34",
+    "kichen_water_c": "60.606",
+    "kichen_water_h": "67.115",
+    "bath_water_c": "268.266",
+    "bath_water_h": "175.773"
+}, {
+    "id": "103",
+    "date": "22-01-2017",
+    "light_day": "6029.38",
+    "light_night": "1966.28",
+    "kichen_water_c": "60.557",
+    "kichen_water_h": "67.017",
+    "bath_water_c": "268.004",
+    "bath_water_h": "175.676"
+}, {
+    "id": "102",
+    "date": "21-01-2017",
+    "light_day": "6024.99",
+    "light_night": "1965.09",
+    "kichen_water_c": "60.519",
+    "kichen_water_h": "66.955",
+    "bath_water_c": "267.898",
+    "bath_water_h": "175.626"
+}, {
+    "id": "101",
+    "date": "20-01-2017",
+    "light_day": "6017.95",
+    "light_night": "1963.53",
+    "kichen_water_c": "60.485",
+    "kichen_water_h": "66.869",
+    "bath_water_c": "267.6",
+    "bath_water_h": "175.408"
+}, {
+    "id": "100",
+    "date": "19-01-2017",
+    "light_day": "6014.99",
+    "light_night": "1962.54",
+    "kichen_water_c": "60.462",
+    "kichen_water_h": "66.815",
+    "bath_water_c": "267.498",
+    "bath_water_h": "175.349"
+}, {
+    "id": "99",
+    "date": "18-01-2017",
+    "light_day": "6009.94",
+    "light_night": "1961.16",
+    "kichen_water_c": "60.429",
+    "kichen_water_h": "66.764",
+    "bath_water_c": "267.264",
+    "bath_water_h": "175.257"
+}, {
+    "id": "98",
+    "date": "17-01-2017",
+    "light_day": "6005.49",
+    "light_night": "1960.07",
+    "kichen_water_c": "60.403",
+    "kichen_water_h": "66.679",
+    "bath_water_c": "267.085",
+    "bath_water_h": "175.125"
+}, {
+    "id": "97",
+    "date": "16-01-2017",
+    "light_day": "5999.49",
+    "light_night": "1959.1",
+    "kichen_water_c": "60.367",
+    "kichen_water_h": "66.59",
+    "bath_water_c": "266.819",
+    "bath_water_h": "175.011"
+}, {
+    "id": "96",
+    "date": "15-01-2017",
+    "light_day": "5994.93",
+    "light_night": "1957.63",
+    "kichen_water_c": "60.333",
+    "kichen_water_h": "66.518",
+    "bath_water_c": "266.634",
+    "bath_water_h": "174.949"
+}, {
+    "id": "95",
+    "date": "14-01-2017",
+    "light_day": "5991.24",
+    "light_night": "1956.25",
+    "kichen_water_c": "60.296",
+    "kichen_water_h": "66.465",
+    "bath_water_c": "266.486",
+    "bath_water_h": "174.908"
+}, {
+    "id": "94",
+    "date": "13-01-2017",
+    "light_day": "5987.5",
+    "light_night": "1954.93",
+    "kichen_water_c": "60.267",
+    "kichen_water_h": "66.424",
+    "bath_water_c": "266.21",
+    "bath_water_h": "174.749"
+}, {
+    "id": "93",
+    "date": "12-01-2017",
+    "light_day": "5983.49",
+    "light_night": "1953.52",
+    "kichen_water_c": "60.224",
+    "kichen_water_h": "66.371",
+    "bath_water_c": "265.998",
+    "bath_water_h": "174.64"
+}, {
+    "id": "92",
+    "date": "11-01-2017",
+    "light_day": "5978.58",
+    "light_night": "1952.25",
+    "kichen_water_c": "60.193",
+    "kichen_water_h": "66.334",
+    "bath_water_c": "265.774",
+    "bath_water_h": "174.587"
+}, {
+    "id": "91",
+    "date": "10-01-2017",
+    "light_day": "5973.935",
+    "light_night": "1950.975",
+    "kichen_water_c": "60.136",
+    "kichen_water_h": "66.2725",
+    "bath_water_c": "265.6115",
+    "bath_water_h": "174.5"
+}, {
+    "id": "90",
+    "date": "09-01-2017",
+    "light_day": "5969.29",
+    "light_night": "1949.7",
+    "kichen_water_c": "60.079",
+    "kichen_water_h": "66.211",
+    "bath_water_c": "265.449",
+    "bath_water_h": "174.413"
+}]

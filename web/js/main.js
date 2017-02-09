@@ -1,6 +1,31 @@
+var s4data = [];
+
 $(function(){
-   
-   $('#btninsert').click(function(){
+    var promesed = promesGET();
+    promesed.done(function (d){
+    svg_canvas(d);
+    });
+    
+        
+// $.post( "/ajax/get.php", function( data ) {
+    //     //alert( "Data Loaded: " + data );
+    //     s4data = JSON.parse(data);
+    //     //alert(s4data.length);
+    //     //alert(s4data);
+    // });
+
+    // //post еще не вернул ничего
+    // var light_day_array = [];
+    // //Вытащить данные для первого графика
+    // for(i=0;i<s4data.length; i++)
+    // {
+    //     light_day_array = [i, s4data[i].light_day];
+    // }
+    // //alert(light_day_array);
+
+});
+
+$('#btninsert').click(function(){
        this.value="Отправка...";
        $.ajax({
            url: "/ajax/insert.php",
@@ -27,7 +52,7 @@ $(function(){
        
     });
 
-    $('#btnupdate').click(function(){
+$('#btnupdate').click(function(){
         this.value="меняем...";
         var id = $("#dbid").val();
         $.ajax({
@@ -47,66 +72,54 @@ $(function(){
             this.value = "Готово";
             alert(data);
         });
-    });
+});
 
-        var s4data = [];
-        
-         $.post( "/ajax/get.php", function( data ) {
-            //alert( "Data Loaded: " + data );
-            s4data = JSON.parse(data);
-            //alert(s4data.length);
-            //alert(s4data);
-        });
 
-        //post еще не вернул ничего
-        var light_day_array = [];
-        //Вытащить данные для первого графика
-        for(i=0;i<s4data.length; i++)
-        {
-            light_day_array = [i, s4data[i].light_day];
-        }
-        //alert(light_day_array);
+function svg_canvas(data){
 
-    var width = 1000;
-    var height = 550;
-    var array = [20, 40, 50 ,60 ,70 ,35, 110 , 21, 55, 12, 33];
+    var width = 500;
+    var height = 300;
 
-    var widthScale = d3.scaleLinear()
-        .domain([0, 110])
-        .range([0, height-15]);
+    var arr = [
+        {"id":125, "light_day": 6120.25},
+        {"id":124, "light_day":6110.67},
+        {"id":123, "light_day":6105.06},
+        {"id":122,"light_day":6095.04}
+        ];
 
-    var color = d3.scaleLinear()
-        .domain([0, 110])
-        .range(["blue", "red"]);
+    // var widthScale = d3.scaleLinear()
+    //     .domain([0, 110])
+    //     .range([0, height-15]);
+
+     var scale = d3.scaleLinear()
+         .domain([0, 7000])
+         .range([0, height-15]);
 
     var canv = d3.select("body")
         .append("svg")
         .attr("width",width)
         .attr("height",height);
-    var circule = canv.append("circle")
-        .attr("cx",250)
-        .attr("cy",250)
-        .attr("r",50)
-        .attr("fill", "red");
-    var l = canv.append("line")
-        .attr("x1",0)
-        .attr("y1",100)
-        .attr("x2",400)
-        .attr("y2",400)
-        .attr("stroke","green")
-        .attr("stroke-width",5);
-    var bars = canv.selectAll("rect")
-        .data(array)
-        .enter()
-            .append("rect")
-            .attr("width",15)//function(d){return d;})
-            .attr("height",function(d){return widthScale(d);})
-            .attr("y",function(d){return height-widthScale(d);})
-            .attr("x", function(d , i){ return i * 20;})
-            // .attr("fill", function(d,i){
-            //     if(i % 2 == 0 )return "red"
-            //     else return "green"
-            .attr("fill",function(d) {return color(d)});
 
-          
-});
+    var group = canv.append("g");
+
+    var line_lday = d3.line()
+        .x(function (d){return scale(2*d.id*10);})
+        .y(function(d){return scale(d.light_day);});
+
+    var bars = group.selectAll("path")
+        .data([data])
+        .enter()
+            .append("path")
+            .attr("d",line_lday)//function(d){return d;})
+            .attr("fill","none")
+            .attr("stroke", "#000")
+            .attr("stroke-width", 2);
+}
+
+function promesGET(){
+    return $.ajax({
+        url : "/ajax/get.php",
+        dataType : "json",
+        type : "POST"
+        });
+}
