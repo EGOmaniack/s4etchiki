@@ -2,7 +2,7 @@ $(function(){
     var promesed = promesGET();
     promesed.done(function (d){
         var difference = get_difference2(d);
-        console.log(difference);
+        //console.log(difference);
         svg_canvas(difference,"light_day","light_night");
         svg_canvas(difference,"kichen_water_c","kichen_water_h");
         svg_canvas(difference,"bath_water_c","bath_water_h");
@@ -59,22 +59,29 @@ function get_difference(d, key){
 }
 
 $('#btninsert').click(function(){
-       this.value="Отправка...";
-       $.ajax({
-           url: "/ajax/insert.php",
-           method: "POST",
-           data: { light_day : $('#light_day').val(),
+    this.value="Отправка..";
+    self = this;
+    $.ajax({
+  url: "/ajax/insert.php",
+  type : "POST",
+  contentType: "application/json; charset=utf-8",
+  data: { light_day : $('#light_day').val(),
            light_night : $('#light_night').val(),
            kichen_water_c : $('#kichen_water_c').val(),
            kichen_water_h : $('#kichen_water_h').val(),
            bath_water_c : $('#bath_water_c').val(),
            bath_water_h : $('#bath_water_h').val() },
-           dataType: "json"
+           dataType: "json",
+    success: function(a){
+      //$('#btninsert').val(a);
+      self.value = a;
+      alert(a);
+//      this.bbb = 5;
+//      console.log(this);
+    }
+});
+//alert(self.value);
 
-       }).done(function(data){
-           this.value = "Готово";
-            alert(data);
-       });
        $('#light_day').val('');
        $('#light_night').val('');
        $('#kichen_water_h').val('');

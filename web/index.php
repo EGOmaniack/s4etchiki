@@ -67,7 +67,7 @@ $sek = strtotime("now");
                 })
             });
         </script>
-              
+
     <script type="text/javascript" src = "js/main.js?<?=$sek?>" ></script>
     </body>
 </html>
