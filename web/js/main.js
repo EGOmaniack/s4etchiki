@@ -63,15 +63,15 @@ $('#btninsert').click(function(){
     self = this;
     $.ajax({
   url: "/ajax/insert.php",
-  type : "POST",
-  contentType: "application/json; charset=utf-8",
+  method : "POST",
+  //contentType: "application/json; charset=utf-8",
   data: { light_day : $('#light_day').val(),
            light_night : $('#light_night').val(),
            kichen_water_c : $('#kichen_water_c').val(),
            kichen_water_h : $('#kichen_water_h').val(),
            bath_water_c : $('#bath_water_c').val(),
            bath_water_h : $('#bath_water_h').val() },
-           dataType: "json",
+    dataType: "json",
     success: function(a){
       //$('#btninsert').val(a);
       self.value = a;
@@ -80,6 +80,7 @@ $('#btninsert').click(function(){
 //      console.log(this);
     }
 });
+
 //alert(self.value);
 
        $('#light_day').val('');

@@ -5,10 +5,10 @@
 // // exit;
 // $inputarr = json_decode($data,true);
 $lightd = $_POST['light_day'];
-echo $lightd;
-exit;
-echo $inputarr['light_day'];
-exit;
+// echo $lightd;
+// exit;
+// echo $inputarr['light_day'];
+// exit;
 $lightn = $_POST['light_night'];
 $wat_kit_hot = $_POST['kichen_water_h'];
 $wat_kit_cold = $_POST['kichen_water_c'];
