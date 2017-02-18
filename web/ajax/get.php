@@ -13,6 +13,5 @@ while ($line = pg_fetch_assoc($result)) {
     unset($temp);
 }
 
-//$array =
 echo json_encode($array);
 ?>
