@@ -8,7 +8,7 @@ $result = pg_query($dbconn, "select id, to_char(\"date\",'DD-MM-YYYY') date , li
 $id;
 while ($line = pg_fetch_assoc($result)) {   
     foreach ($line as $col_key => $col_value ) { 
-        if($col_key != "id")echo "\t<input id=".$id.$col_key." tipe='text' value=".$col_value."><lable>$col_key</lable>\n<br>";
+        if($col_key != "id")echo "\t<input id=".$id.$col_key." type='text' value=".$col_value."><lable>$col_key</lable>\n<br>";
         else
         {
             $id = $col_value;
