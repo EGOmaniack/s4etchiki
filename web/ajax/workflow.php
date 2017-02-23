@@ -6,16 +6,21 @@ $xmlka = file_get_contents("../workflow.xml");
 
 //$states = new SimpleXMLElement($xmlka);
 
-$string = <<<XML
-<a>
- <foo name="one" game="lonely">1</foo>
-</a>
-XML;
-
 $xml = simplexml_load_string($xmlka);
-foreach($xml->foo[0]->attributes() as $a => $b) {
-    echo $a,'="',$b,"\"\n";
+
+$defstate = $xml->formlist->attributes()['start'];
+
+$forms;
+
+foreach($xml->formlist->form as $value) {
+    //echo $key,'="',$value,"\"\n";
+    $forms['name'] = ((string)$value->attributes()['name']);
+    foreach($value->state as $elem){
+        var_dump($elem->attributes());
+        $forms['name']['state'] = (array)$elem->attributes();
+    }
 }
+var_dump($forms);
 exit;
 var_dump($states);
 exit();

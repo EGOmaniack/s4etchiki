@@ -1,16 +1,14 @@
 <workflow>
-    <s4etchiki start="true">
-        <form val='s4etchiki'/>
-        <state btn ='next' form = 'graphic'/>
-    </s4etchiki>
-    <graphic>
-        <form val='graphic'/>
-        <state btn ='next'  form='changedata'/>
-        <state btn ='back'  form='s4etchiki'/>
-    </graphic>
-    <changedata>
-        <form val='changedata'/>
-        <state btn ='next'  form='s4etchiki'/>
-        <state btn ='back'  form='graphic'/>
-    </changedata>
+    <formlist start='s4etchiki'>
+        <form name='s4etchiki'>
+        <state btn='next' form ='graphic'/>
+        </form>
+        <form name='graphic'>
+        <state btn='next' form ='changedata'/>
+        <state btn='back' form ='s4etchiki'/>
+        </form>
+        <form name='changedata'>
+        <state btn='back' form ='graphic'/>
+        </form>
+    </formlist>
 </workflow>
