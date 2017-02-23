@@ -1,11 +1,5 @@
 $(function () {
-    $.getJSON("/ajax/get.php", function (data) {
-        var difference = get_difference2(data);
-        //console.log(difference);
-        svg_canvas(difference, "light_day", "light_night");
-        svg_canvas(difference, "kichen_water_c", "kichen_water_h");
-        svg_canvas(difference, "bath_water_c", "bath_water_h");
-    });
+    
 });
 function get_difference2(d) {
     var all_diff = [];
@@ -127,7 +121,7 @@ function svg_canvas(data, key, key2) {
         .domain([0, 30])
         .range([width - 15, 0]);
 
-    var canv = d3.select("body")
+    var canv = d3.select("#content")
         .append("svg")
         .attr("width", width)
         .attr("height", height);
