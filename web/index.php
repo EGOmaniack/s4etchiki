@@ -37,12 +37,13 @@ $sek = strtotime("now");
     <body>
 
         <h2>Контроль показателей</h2>
-
+        <input class="btn back" type="button" value="Назад">
+        <input class="btn next" type="button" value="Вперед">
+        
         <h2 id='title'></h2>
         <div id='content'>
         </div>
-        <input class="btn back" type="button" value="Назад">
-        <input class="btn next" type="button" value="Вперед">
+        
         <script type="text/javascript" src = "js/main.js?<?=$sek?>" ></script>
         <script>
         window.state = "";
@@ -76,8 +77,14 @@ $sek = strtotime("now");
                 });
             }
             
-            function changedata (data){}
-            function getdata (data){}
+            function changedata (){
+                $("#content").html('');
+                $.getJSON("/ajax/lastdata.php", function (data) {
+                    console.log("data");
+                    $("#content").html(data);
+                });
+                $("#title").val('Предыдущие данные');
+            }
             
             function changestate (data){
                 if(data.form == 's4etchiki'){
@@ -85,6 +92,9 @@ $sek = strtotime("now");
                 }
                 if(data.form == 'graphic'){
                     graphic();
+                }
+                if(data.form == 'changedata'){
+                    changedata();
                 }
             }
 

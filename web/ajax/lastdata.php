@@ -1,6 +1,6 @@
 <?php
-$ansver;
-$ansver = "<h2>Последние данные</h2>";
+$ansver="<div>\n";
+//$ansver = "<h2>Последние данные</h2>";
 $dbconn = pg_connect("host=localhost port=5432 dbname=s4etchiki user=postgres password=Rgrur4frg56eq16")
     or die('Could not connect: ' . pg_last_error());
 
@@ -10,16 +10,16 @@ $result = pg_query($dbconn, "select id, to_char(\"date\",'DD-MM-YYYY') date , li
 $id;
 while ($line = pg_fetch_assoc($result)) {   
     foreach ($line as $col_key => $col_value ) { 
-        if($col_key != "id")$ansver .= "\t<input id=".$id.$col_key." tipe='text' value=".$col_value."><lable>$col_key</lable>\n<br>";
+        if($col_key != "id")$ansver .= "<input id=".$id.$col_key." tipe='text' value=".$col_value."><lable>$col_key</lable>\n\t<br>";
         else
         {
             $id = $col_value;
-             $ansver .= "\t <input type='hidden' id='dbid' value=".$col_value.">\n";
+             $ansver .= "\t <input type='hidden' id='dbid' value=".$col_value.">\n\t";
         }
     }
     $ansver .= "<hr>";
 }
-$ansver .= "<input type='button' value='Изменить' id='btnupdate'>\n";
+$ansver .= "<input type='button' value='Изменить' id='btnupdate'>\n</div>";
 
 pg_free_result($result);
 pg_close($dbconn);

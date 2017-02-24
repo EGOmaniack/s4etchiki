@@ -1,14 +1,14 @@
 <workflow>
     <formlist start='s4etchiki'>
         <form name='s4etchiki'>
-        <state btn='next' form ='graphic'/>
+            <state btn='next' form ='graphic'/>
         </form>
         <form name='graphic'>
-        <state btn='next' form ='changedata'/>
-        <state btn='back' form ='s4etchiki'/>
+            <state btn='next' form ='changedata'/>
+            <state btn='back' form ='s4etchiki'/>
         </form>
         <form name='changedata'>
-        <state btn='back' form ='graphic'/>
+            <state btn='back' form ='graphic'/>
         </form>
     </formlist>
 </workflow>
