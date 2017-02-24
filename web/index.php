@@ -11,14 +11,16 @@ $sek = strtotime("now");
         <title>Счетчики</title>
     </head>
     <body>
+        
         <h2>Контроль показателей</h2>
+        <div class="main">
         <div class="menu">
         <input class="btn back" type="button" value="Назад">
         <input class="btn next" type="button" value="Вперед">
         </div>
         <h2 id='title'></h2>
         <div id='content'></div>
-        
+        </div>
         <script type="text/javascript" src = "js/main.js?<?=$sek?>" ></script>
 
         <script>

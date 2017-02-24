@@ -7,6 +7,14 @@ width: 100%;
   font-family: Verdana;
   background: #ddd;
 }
+.main{
+    background-color: white;
+    margin: 12px auto;
+    padding: 12px 40px;
+    width: fit-content;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),
+  0 17px 50px 0 rgba(0,0,0,0.19);
+}
 svg {
     border: 1px solid silver;
     display: block;
