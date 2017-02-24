@@ -1,5 +1,5 @@
 <?php
-$ansver="<div>\n";
+$ansver="<div class='form'>\n";
 //$ansver = "<h2>Последние данные</h2>";
 $dbconn = pg_connect("host=localhost port=5432 dbname=s4etchiki user=postgres password=Rgrur4frg56eq16")
     or die('Could not connect: ' . pg_last_error());
@@ -17,7 +17,7 @@ while ($line = pg_fetch_assoc($result)) {
              $ansver .= "\t <input type='hidden' id='dbid' value=".$col_value.">\n\t";
         }
     }
-    $ansver .= "<hr>";
+    //$ansver .= "<hr>";
 }
 $ansver .= "<input type='button' value='Изменить' id='btnupdate'>\n</div>";
 

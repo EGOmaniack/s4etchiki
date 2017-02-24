@@ -12,9 +12,10 @@ $sek = strtotime("now");
     </head>
     <body>
         <h2>Контроль показателей</h2>
+        <div class="menu">
         <input class="btn back" type="button" value="Назад">
         <input class="btn next" type="button" value="Вперед">
-        
+        </div>
         <h2 id='title'></h2>
         <div id='content'></div>
         
@@ -27,14 +28,14 @@ $sek = strtotime("now");
             function s4etchiki (){
                 $("#content").html('');
                 //var form = '<h2>Новые данные</h2>';
-                var form ='<input placeholder="Свет день" type="number" id="light_day">';
+                var form ='<div class="form"><input placeholder="Свет день" type="number" id="light_day">';
                 form += '<br><input placeholder="Свет ночь" type="number" id="light_night">';
                 form += '<br><input placeholder="вода кухня холодная" type="number" id="kichen_water_c">';
                 form += '<br><input placeholder="Вода кухня горячая" type="number" id="kichen_water_h">';
                 form += '<br><input placeholder="Вода ванна холодная" type="number" id="bath_water_c">';
                 form += '<br><input placeholder="Вода ванна горячая" type="number" id="bath_water_h">';
                 form += '<br><input class="insert" type="button" value="Отправить" id="btn_insert" onclick ="change_state">';
-                form += '<br><br>';
+                form += '<br><br></div>';
                 $("#content").html(form);
                 $("#title").val('Счетчики');
             }
