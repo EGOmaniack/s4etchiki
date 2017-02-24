@@ -2,3 +2,6 @@ svg {
     border: 2px solid;
     display: inline-block;
 }
+.hide{
+    display: none;
+}
