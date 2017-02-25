@@ -1,13 +1,16 @@
 <workflow>
     <formlist start='s4etchiki'>
         <form name='s4etchiki'>
+            <orcestration init="s4etchiki_init" action="s4etchiki"/>
             <state btn='next' form ='graphic'/>
         </form>
         <form name='graphic'>
+            <orcestration init="graphic_init" action="graphic"/>
             <state btn='next' form ='changedata'/>
             <state btn='back' form ='s4etchiki'/>
         </form>
         <form name='changedata'>
+            <orcestration init="changedata_init" action="changedata"/>
             <state btn='back' form ='graphic'/>
         </form>
     </formlist>

@@ -31,7 +31,7 @@ svg {
 .menu{
     width: 440px;
     padding: 3px 20px;
-    background-color: #7FB5FA;
+    background-color: black;
 }
 .btn{
     width: 220px;
@@ -58,11 +58,11 @@ svg {
   padding: 13px 10px;
 }
 .s4et{
-    background-color: #3FA344;
+    background-color: #FDDC9A;
 }
 .hide{
     display: none;
 }
-.back{
-    display: none;
+a{
+    color: #FD0509;
 }

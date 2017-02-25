@@ -1,0 +1,6 @@
+<workflow>
+    <graphic>
+        <orcestration init="graphic_init" action="s4etchiki"/>
+        <state btn='next' live-module ='changestate'/>
+    </graphic>
+</workflow>
