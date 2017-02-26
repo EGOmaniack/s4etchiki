@@ -59,13 +59,10 @@ svg {
   width: 218px;
   padding: 13px 10px;
 }
-.s4et{
-    background-color: #6BD508;
-}
 .hide{
     display: none;
 }
-.s4et{
-    background: #FFB200;
+.graph{
+    background:#FFB200;
     color: gray;
 }

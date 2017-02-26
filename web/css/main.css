@@ -7,6 +7,11 @@ width: 100%;
   font-family: Verdana;
   background: #ddd;
 }
+.title{
+    color: #1B506F;
+    width: fit-content;
+    margin: 0 auto;
+}
 .main{
     background-color: white;
     margin: 12px auto;
@@ -18,11 +23,11 @@ width: 100%;
 svg {
     border: 1px solid silver;
     display: block;
-    background-color: white;
+    background-color: #EAFFFF;
     margin: 2px auto;
 }
 .form{
-    background-color: white;
+    background-color: #EAFFFF;
     width: fit-content;
     margin: 2px auto;
     padding: 15px 60px;
@@ -57,12 +62,13 @@ svg {
   width: 218px;
   padding: 13px 10px;
 }
-.s4et{
+.green{
     background-color: #3FA344;
 }
 .hide{
     display: none;
 }
 .back{
+    background: #2283BB;
     display: none;
 }

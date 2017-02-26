@@ -17,7 +17,7 @@
                 $("#title").val('Счетчики');
             }
 
-            function graphic () {
+           function graphic () {
                 $("#content").html('');
                 $("#title").val('Графики');
 

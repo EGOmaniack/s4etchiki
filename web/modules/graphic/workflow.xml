@@ -1,6 +1,15 @@
 <workflow>
-    <graphic>
-        <orcestration init="graphic_init" action="s4etchiki"/>
-        <state btn='next' live-module ='changestate'/>
+    <graphic start="true" name="electrik">
+        <orcestration init="electrik_init" />
+        <state go-next ='water_kit'/>
+    </graphic>
+    <graphic name="water_kit">
+        <orcestration init="water_kit_init" />
+        <state go-next ='water_bath'/>
+        <state go-back ='electrik'/>
+    </graphic>
+    <graphic name="water_bath">
+        <orcestration init="water_bath_init" />
+        <state go-back ='water_kit'/>
     </graphic>
 </workflow>

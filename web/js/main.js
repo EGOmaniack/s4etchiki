@@ -154,9 +154,4 @@ function svg_canvas(data, key, key2) {
         .attr("stroke", "#BE4B48")
         .attr("stroke-width", 3);
 
-    /*var graf2 = group.append("path")
-            .attr("d",line_lnight)
-            .attr("fill","none")
-            .attr("stroke", "#BE4B48")
-            .attr("stroke-width", 3);*/
 }
