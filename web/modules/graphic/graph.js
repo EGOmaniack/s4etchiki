@@ -7,7 +7,6 @@ function draw(){
     }
 }
 
-
 $.getJSON(workflow.path + "?init", function (_data) {
     data = _data; 
     difference = get_difference2(data);
@@ -20,13 +19,13 @@ $.getJSON(workflow.path + "?init", function (_data) {
 //                 svg_canvas(difference, "light_day", "light_night");
 //                 svg_canvas(difference, "kichen_water_c", "kichen_water_h");
 //                 svg_canvas(difference, "bath_water_c", "bath_water_h");
-//                 });
+//});
 
 function graphic () {
                 $("#content").html('');
-                $("#title").val('Графики');
-                $("svg").append('<a class="btn next">next<a><a class="btn back">back<a>');
-                
+                $("#title").html('Графики');
+                $("#content").append('<a class="btn small next">next<a><a class="btn small back">back<a>');
+                $("#content").append('<h5 class="title">Электричество</h5>');
             }
 
 graphic();

@@ -51,50 +51,7 @@ function get_difference(d, key) {
     return adif;
 }
 
-$('#btninsert').click(function () {
-    this.value = "Отправка..";
-    self = this;
-    $.post("/ajax/insert.php", {
-        light_day: $('#light_day').val(),
-        light_night: $('#light_night').val(),
-        kichen_water_c: $('#kichen_water_c').val(),
-        kichen_water_h: $('#kichen_water_h').val(),
-        bath_water_c: $('#bath_water_c').val(),
-        bath_water_h: $('#bath_water_h').val()
-    }, function (data) {
-        self.value = data;      
-    });
-    $('#light_day').val('');
-    $('#light_night').val('');
-    $('#kichen_water_h').val('');
-    $('#kichen_water_c').val('');
-    $('#bath_water_h').val('');
-    $('#bath_water_c').val('');
 
-});
-
-$('#btnupdate').click(function () {
-    this.value = "меняем...";
-    var id = $("#dbid").val();
-    $.ajax({
-        url: "/ajax/update.php",
-        method: "POST",
-        data: {
-            dbid: id,
-            date: $('#date').val(),
-            light_day: $('#' + id + 'light_day').val(),
-            light_night: $('#' + id + 'light_night').val(),
-            kichen_water_c: $('#' + id + 'kichen_water_c').val(),
-            kichen_water_h: $('#' + id + 'kichen_water_h').val(),
-            bath_water_c: $('#' + id + 'bath_water_c').val(),
-            bath_water_h: $('#' + id + 'bath_water_h').val()
-        },
-        dataType: "json"
-    }).done(function (data) {
-        this.value = "Готово";
-        alert(data);
-    });
-});
 
 
 function svg_canvas(data, key, key2) {

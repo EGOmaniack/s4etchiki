@@ -10,7 +10,7 @@ function s4etchiki (){
                 form += '<br><input class="insert" type="button" value="Отправить" id="btn_insert">';
                 form += '<br><br></div>';
                 $("#content").html(form);
-                $("#title").val('Счетчики');
+                $("#title").html('Введите данные');
             }
 s4etchiki();
 
@@ -25,13 +25,9 @@ $('#btn_insert').click(function () {
         bath_water_c: $('#bath_water_c').val(),
         bath_water_h: $('#bath_water_h').val()
     }, function (data) {
-        self.value = data;      
+        if(data != undefined){
+            self.value = "Отправлено";
+            $(".form").children().val("");
+        }
     });
-    $('#light_day').val('');
-    $('#light_night').val('');
-    $('#kichen_water_h').val('');
-    $('#kichen_water_c').val('');
-    $('#bath_water_h').val('');
-    $('#bath_water_c').val('');
-
 });

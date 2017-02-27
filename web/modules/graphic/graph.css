@@ -53,10 +53,24 @@ svg {
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),
   0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.next{
+    float: right;
+    background: #3FA344;
+}
+.small{
+    display: inline-block !important;
+    width: 50px;
+}
 .btn:active:hover{
   color: #EEEEDE;
   margin: 7px auto;
   width: 218px;
+  padding: 13px 10px;
+}
+.small:active:hover{
+  color: #EEEEDE;
+  margin: 7px auto;
+  width: 48px;
   padding: 13px 10px;
 }
 .hide{

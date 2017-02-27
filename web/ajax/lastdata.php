@@ -1,14 +1,12 @@
 <?php
 $ansver="<div class='form'>\n";
-//$ansver = "<h2>Последние данные</h2>";
 $dbconn = pg_connect("host=localhost port=5432 dbname=s4etchiki user=postgres password=Rgrur4frg56eq16")
     or die('Could not connect: ' . pg_last_error());
-
 
 $result = pg_query($dbconn, "select id, to_char(\"date\",'DD-MM-YYYY') date , light_day, light_night, kichen_water_c, kichen_water_h, bath_water_c, bath_water_h from  s4etchiki.data ORDER BY id DESC LIMIT 1") or die('Ошибка запроса: ' . pg_last_error()); 
 
 $id;
-while ($line = pg_fetch_assoc($result)) {   
+while ($line = pg_fetch_assoc($result)) {
     foreach ($line as $col_key => $col_value ) { 
         if($col_key != "id")$ansver .= "<input id=".$id.$col_key." tipe='text' value=".$col_value."><lable>$col_key</lable>\n\t<br>";
         else
@@ -19,7 +17,7 @@ while ($line = pg_fetch_assoc($result)) {
     }
     //$ansver .= "<hr>";
 }
-$ansver .= "<input type='button' value='Изменить' id='btnupdate'>\n</div>";
+$ansver .= "<input type='button' value='Изменить' id='btn_update'>\n</div>";
 
 pg_free_result($result);
 pg_close($dbconn);
