@@ -1,15 +1,21 @@
 <workflow>
     <graphic start="true" name="electrik">
+        <readable val="Электричество"/>
+        <graphs graph1="light_day" graph2="light_night"/>
         <orcestration init="electrik_init" />
-        <state go-next ='water_kit'/>
+        <state go_next ="water_kit"/>
     </graphic>
     <graphic name="water_kit">
+        <readable val="Вода на кухне"/>
+        <graphs graph1="kichen_water_c" graph2="kichen_water_h"/>
         <orcestration init="water_kit_init" />
-        <state go-next ='water_bath'/>
-        <state go-back ='electrik'/>
+        <state go_next ="water_bath"/>
+        <state go_back ="electrik"/>
     </graphic>
     <graphic name="water_bath">
+        <readable val="Вода в ванной"/>
+        <graphs graph1="bath_water_c" graph2="bath_water_h"/>
         <orcestration init="water_bath_init" />
-        <state go-back ='water_kit'/>
+        <state go_back ="water_kit"/>
     </graphic>
 </workflow>

@@ -8,24 +8,46 @@ $xmlka = file_get_contents(dirname(__FILE__)."/workflow.xml");
 
 $json = XML2JSON($xmlka);
 $arr = json_decode($json, true);
-var_dump($arr);
-exit;
-
-
-/*
-$xml = simplexml_load_string($xmlka);
 
 $screens;
 
+foreach($arr['graphic'] as $value) {
+    $screen = $value;
+    if($value['start'] == true){ $screens['start'] = $value['name']; }
+    if( count($screen['state']) > 1 ) { 
+        foreach($screen['state'] as $state){
+            foreach($state as $key => $elem){
+                $states[$key] = $elem;
+            }
+        }
+        unset($screen['state']);
+        $screen['state'] = $states;
+        unset($states);
+     }
+    $screens[$value['name']] = $screen;
+    unset($screen);
+}
+
+// var_dump($screens);
+// exit;
+
+
+
+//$xml = simplexml_load_string($xmlka);
+
+
+/*
 foreach($xml->graphic as $value) {
         if((string)$value->attributes()['start'] == 'true'){
             $screens['start'] = ((string)$value->attributes()['name']);
         }
         $screen['name'] = (string)$value->attributes()['name'];
-        var_dump($value->state);
-    foreach($value->state as $key => $elem){       
-        $screen['state']['go_next'] = (string)$elem->attributes()['go-next'];
-        $screen['state']['go_back'] = (string)$elem->attributes()['go-back'];
+
+    foreach($value->state as $key => $elem){
+        //в каждом state есть только один вариант. либо go_next либо go_back и они друг
+        //друга перетирают
+        $screen['state']['go_next'] = (string)$value->state->attributes()['go-next'];
+        $screen['state']['go_back'] = (string)$value->state->attributes()['go-back'];
     }
     foreach($value->orcestration as $elem){
         $screen['orcestration']['init'] = (string)$elem->attributes()['init'];
@@ -34,8 +56,10 @@ foreach($xml->graphic as $value) {
     $screens[((string)$value->attributes()['name'])]=$screen;
     unset($screen);
 }
+var_dump($screens);
 */
-//var_dump($screens);
+
+
 $_SESSION['workflow'] = $screens;
 // $include = 'orcestration/'.$_SESSION['workflow'][$_GET['flow']]['orcestration']['init'].'.php';
 // echo $include;
