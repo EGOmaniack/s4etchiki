@@ -58,7 +58,7 @@ svg {
     background: #3FA344;
 }
 .small{
-    display: inline-block !important;
+    display: inline-block;
     width: 50px;
 }
 .btn:active:hover{
@@ -73,10 +73,10 @@ svg {
   width: 48px;
   padding: 13px 10px;
 }
-.hide{
-    display: none;
-}
 .graph{
     background:#FFB200;
     color: gray;
+}
+.hide{
+    display: none;
 }

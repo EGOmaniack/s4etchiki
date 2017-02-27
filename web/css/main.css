@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0; 
 }
+.hide{
+    display: none;
+}
 html{
 width: 100%;
   font-family: Verdana;
@@ -68,9 +71,6 @@ svg {
 }
 .green{
     background-color: #3FA344;
-}
-.hide{
-    display: none;
 }
 .back{
     background: #2283BB;

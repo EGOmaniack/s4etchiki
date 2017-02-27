@@ -14,8 +14,9 @@ foreach($xml->graphic as $value) {
             $screens['start'] = ((string)$value->attributes()['name']);
         }
     foreach($value->state as $elem){
-        $screen['state']['go-next'] = (string)$elem->attributes()['go-next'];
-        $screen['state']['go-back'] = (string)$elem->attributes()['go-back'];
+        $screen['name'] = (string)$value->attributes()['name'];
+        $screen['state']['go_next'] = (string)$elem->attributes()['go-next'];
+        $screen['state']['go_back'] = (string)$elem->attributes()['go-back'];
     }
     foreach($value->orcestration as $elem){
         $screen['orcestration']['init'] = (string)$elem->attributes()['init'];
@@ -24,7 +25,7 @@ foreach($xml->graphic as $value) {
     $screens[((string)$value->attributes()['name'])]=$screen;
     unset($screen);
 }
-
+var_dump($screens);
 $_SESSION['workflow'] = $screens;
 // $include = 'orcestration/'.$_SESSION['workflow'][$_GET['flow']]['orcestration']['init'].'.php';
 // echo $include;
