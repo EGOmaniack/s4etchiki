@@ -7,7 +7,7 @@ function s4etchiki (){
                 form += '<br><input placeholder="Вода кухня горячая" type="number" id="kichen_water_h">';
                 form += '<br><input placeholder="Вода ванна холодная" type="number" id="bath_water_c">';
                 form += '<br><input placeholder="Вода ванна горячая" type="number" id="bath_water_h">';
-                form += '<br><input class="insert" type="button" value="Отправить" id="btn_insert">';
+                form += '<br><div class="btn small green" id="btn_insert">Отправить</div>';
                 form += '<br><br></div>';
                 $("#content").html(form);
                 $("#title").html('Введите данные');

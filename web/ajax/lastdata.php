@@ -17,7 +17,7 @@ while ($line = pg_fetch_assoc($result)) {
     }
     //$ansver .= "<hr>";
 }
-$ansver .= "<input type='button' value='Изменить' id='btn_update'>\n</div>";
+$ansver .= "<div class='btn green' id='btn_update'>Изменить</div>\n</div>";
 
 pg_free_result($result);
 pg_close($dbconn);

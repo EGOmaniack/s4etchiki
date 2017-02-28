@@ -34,7 +34,7 @@ svg {
     margin: 2px auto;
 }
 .form{
-    background-color: #EAFFFF;
+    background-color: #FFFFFF;
     width: fit-content;
     margin: 2px auto;
     padding: 15px 60px;
@@ -60,6 +60,7 @@ svg {
     transition-duration: 0.1s;
 }
 .btn:hover{
+    cursor: pointer;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),
   0 17px 50px 0 rgba(0,0,0,0.19);
 }
