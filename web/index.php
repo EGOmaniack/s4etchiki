@@ -22,7 +22,7 @@ $castomjs;
         </div>
         <div class="main">
         <div class="menu">
-            <a class="btn s4et green" href="/?flow=s4etchiki">Перейти к счетчикам</a>
+            <a class="btn s4et green" href="/?flow=s4etchiki">Записать показатели</a>
             <a class="btn graph green" href="/?flow=graphic">Перейти к графикам</a>
             <a class="btn change green" href="/?flow=changestate">Корректировка данных</a>
             <a class="btn back" href="/">Назад</a>

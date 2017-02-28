@@ -28,43 +28,7 @@ foreach($arr['graphic'] as $value) {
     unset($screen);
 }
 
-// var_dump($screens);
-// exit;
-
-
-
-//$xml = simplexml_load_string($xmlka);
-
-
-/*
-foreach($xml->graphic as $value) {
-        if((string)$value->attributes()['start'] == 'true'){
-            $screens['start'] = ((string)$value->attributes()['name']);
-        }
-        $screen['name'] = (string)$value->attributes()['name'];
-
-    foreach($value->state as $key => $elem){
-        //в каждом state есть только один вариант. либо go_next либо go_back и они друг
-        //друга перетирают
-        $screen['state']['go_next'] = (string)$value->state->attributes()['go-next'];
-        $screen['state']['go_back'] = (string)$value->state->attributes()['go-back'];
-    }
-    foreach($value->orcestration as $elem){
-        $screen['orcestration']['init'] = (string)$elem->attributes()['init'];
-    }
-    
-    $screens[((string)$value->attributes()['name'])]=$screen;
-    unset($screen);
-}
-var_dump($screens);
-*/
-
-
 $_SESSION['workflow'] = $screens;
-// $include = 'orcestration/'.$_SESSION['workflow'][$_GET['flow']]['orcestration']['init'].'.php';
-// echo $include;
-// exit;
-
 
 function XML2JSON($xml) {
 

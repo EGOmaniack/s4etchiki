@@ -2,7 +2,6 @@
 $dbconn = pg_connect("host=localhost port=5432 dbname=s4etchiki user=postgres password=Rgrur4frg56eq16")
     or die('Could not connect: ' . pg_last_error());
 
-
 $result = pg_query($dbconn, "select id, to_char(\"date\",'DD-MM-YYYY') date , light_day, light_night, kichen_water_c, kichen_water_h, bath_water_c, bath_water_h from  s4etchiki.data ORDER BY id") or die('Ошибка запроса: ' . pg_last_error()); 
 
 echo "<table>\n";

@@ -32,6 +32,7 @@ function get_difference2(d) {
     }
     return all_diff;
 }
+
 function get_difference(d, key) {
     var adif = [];
     if (key == undefined) key = 'light_day';
