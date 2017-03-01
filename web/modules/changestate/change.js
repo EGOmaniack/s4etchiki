@@ -8,13 +8,10 @@ function changedata (){
 changedata();
 
 $(document.body).on('click', '#btn_update', function(){
-    alert(111);
-    this.value = "меняем...";
+    var self = $('#btn_update');
+    self.value = "меняем...";
     var id = $("#dbid").val();
-    $.ajax({
-        url: "/ajax/update.php",
-        method: "POST",
-        data: {
+    $.post("/ajax/update.php",{
             dbid: id,
             date: $('#date').val(),
             light_day: $('#' + id + 'light_day').val(),
@@ -23,10 +20,8 @@ $(document.body).on('click', '#btn_update', function(){
             kichen_water_h: $('#' + id + 'kichen_water_h').val(),
             bath_water_c: $('#' + id + 'bath_water_c').val(),
             bath_water_h: $('#' + id + 'bath_water_h').val()
-        },
-        dataType: "json"
-    }).done(function (data) {
-        this.value = "Готово";
+        },function (data) {
+        self.value = "Готово";
         alert(data);
     });
 });

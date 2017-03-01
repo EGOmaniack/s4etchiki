@@ -12,8 +12,8 @@ $dbconn = pg_connect("host=localhost port=5432 dbname=s4etchiki user=postgres pa
     or die('Could not connect: ' . pg_last_error());
 
 
-$sqlstr = "update s4etchiki.data";
-$sqlstr .= " SET light_day =".$lightd.", ";
+$sqlstr = "update s4etchiki.data ";
+$sqlstr .= "SET light_day =".$lightd.", ";
 $sqlstr .= "light_night = ".$lightn.", ";
 $sqlstr .= "kichen_water_h = ".$wat_kit_hot.", ";
 $sqlstr .= "kichen_water_c = ".$wat_kit_cold.", ";

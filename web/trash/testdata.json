@@ -1,0 +1,28 @@
+[{
+    "id": "144",
+    "date": "2017-02-16",
+    "light_day": "6148.01",
+    "light_night": "1994.63",
+    "kichen_water_c": "61.36",
+    "kichen_water_h": "68.592",
+    "bath_water_c": "276",
+    "bath_water_h": "178.361"
+}, {
+    "id": "142",
+    "date": "2017-02-13",
+    "light_day": "6143.69",
+    "light_night": "1993.86",
+    "kichen_water_c": "61.34",
+    "kichen_water_h": "68.525",
+    "bath_water_c": "273",
+    "bath_water_h": "178.178"
+}, {
+    "id": "141",
+    "date": "2017-02-09",
+    "light_day": "6139.54",
+    "light_night": "1992.85",
+    "kichen_water_c": "61.305",
+    "kichen_water_h": "68.466",
+    "bath_water_c": "269",
+    "bath_water_h": "178.055"
+}]

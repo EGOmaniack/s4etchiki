@@ -3,17 +3,30 @@ var difference;
 
 workflow.currentstate = workflow[workflow.start];
 
-(function gettestdata (variable){
+function gettestdata (variable){
     self = this;
-    $.get("testdata.json", (d) => console.log(validate(d)) );
+    $.get("trash/testdata.json", (d) => console.log(validate(d)) );
 
-})()
+}
 
 function validate(data){
+    function insertday(j,d){
+        var obj = {};
+        obj['id'] = j;
+        obj['inserted'] = false;
+        $.each(d, function(index, value) {
+            if(index != 'id' && index != 'date'){
+                obj[index] = parseFloat(d[index]);
+            }
+        });
+        return obj;
+    }
     var dif;
     var day = 86400000;//msec
     var _data =[];
     for(i = 0,j=0 ; i < data.length-1; i++){
+        _data.push(insertday(j,data[i]));
+        j++;
         dif = Date.parse(data[i].date) - Date.parse(data[i+1].date);
         if(dif > day){
             for( z = 1; z < dif/day; z++ ){
@@ -22,29 +35,22 @@ function validate(data){
                 // obj['date'] = new Date();
                 // obj['date'] = obj['date'].getDate()+1
                 obj['id'] = j;
+                obj['inserted'] = true;
                 //для каждого показателя ( (data[i+1] - data[i]) * i / (dif/day) + data[i]
                 $.each(data[i], function(index, value) {
                     if(index != 'id' && index != 'date'){
-                        obj[index] = ( parseFloat(data[i+1][index]) - parseFloat(value) / (dif/day)) + parseFloat(data[i][index]);
+                        obj[index] = ( ( (parseFloat(value) - parseFloat(data[i+1][index])) / (dif/day) ) * (dif/day - z) + parseFloat(data[i+1][index]) ); /// (dif/day)) + parseFloat(data[i][index]
                     }
                 });
                 _data.push(obj);
                 j++;
             }
-            console.log('difference is', dif/day, 'days');
+            console.log('difference is', dif/day, 'days', 'date is ', data[i].date);
         }else{ /*Разница в один день*/
-            var obj = {};
-            obj['id'] = j;
-            $.each(data[i], function(index, value) {
-                    if(index != 'id' && index != 'date'){
-                        obj[index] = ( parseFloat(data[i+1][index]) - parseFloat(value) / (dif/day)) + parseFloat(data[i][index]);
-                    }
-                });
-            _data.push(obj);
-            j++;
-        }
+            //console.log('difference is', dif/day, 'days', 'date is ', data[i].date);
+        }  
     }
-
+    _data.push(insertday(_data.length,data[data.length-1]));
     return _data;
 }
 
@@ -62,7 +68,7 @@ function buttonsUpdate(){
 }
 
 $.getJSON(workflow.path + "?init", function (_data) {
-    data = _data; 
+    data = validate(_data);
     difference = get_difference2(data);
     draw();
 });
