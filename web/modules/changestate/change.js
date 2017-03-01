@@ -7,7 +7,7 @@ function changedata (){
 }
 changedata();
 
-$('#btn_update').click(function () {
+$(document.body).on('click', '#btn_update', function(){
     alert(111);
     this.value = "меняем...";
     var id = $("#dbid").val();
