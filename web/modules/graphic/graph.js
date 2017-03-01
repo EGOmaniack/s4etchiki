@@ -2,6 +2,19 @@ var data;
 var difference;
 
 workflow.currentstate = workflow[workflow.start];
+validate([
+    {'date':'2017-08-28', 'id':'0',"light_day": "6148.01"},
+    {'date':'2017-08-25', 'id': '1',"light_day": "6100"},
+    {'date':'2017-08-24', 'id': '1',"light_day": "6099"}
+]);
+
+function validate(data){
+    var dif;
+    for(i = 0 ; i < data.length-1; i++){
+        dif = Date.parse(data[i].date) - Date.parse(data[i+1].date);
+        if(dif > 86400000){console.log('difference is', dif/86400000, 'days');}
+    }
+}
 
 function draw(){
     $('#graphid').html(workflow.currentstate.readable.val);
