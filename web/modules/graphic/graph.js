@@ -2,18 +2,31 @@ var data;
 var difference;
 
 workflow.currentstate = workflow[workflow.start];
-validate([
-    {'date':'2017-08-28', 'id':'0',"light_day": "6148.01"},
-    {'date':'2017-08-25', 'id': '1',"light_day": "6100"},
-    {'date':'2017-08-24', 'id': '1',"light_day": "6099"}
-]);
+
+(function gettestdata (variable){
+    self = this;
+    $.get("testdata.json", (d) => console.log(validate(d)) );
+
+})()
 
 function validate(data){
     var dif;
-    for(i = 0 ; i < data.length-1; i++){
+    var day = 86400000;//msec
+    var _data =[];
+    for(i = 0, j = 0 ; i < data.length-1; i++){
         dif = Date.parse(data[i].date) - Date.parse(data[i+1].date);
-        if(dif > 86400000){console.log('difference is', dif/86400000, 'days');}
+        if(dif > day){
+            for( z = 0; z < dif/day; z++ ){
+                //для каждого показателя ( (data[i+1] - data[i]) * i / (dif/day) ) + data[i]
+            }
+            console.log('difference is', dif/day, 'days');
+        }else{ /*Разница в один день*/
+            _data[j] = data[i];
+            j++;
+        }
     }
+
+    return _data;
 }
 
 function draw(){
