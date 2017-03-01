@@ -13,15 +13,34 @@ function validate(data){
     var dif;
     var day = 86400000;//msec
     var _data =[];
-    for(i = 0, j = 0 ; i < data.length-1; i++){
+    for(i = 0,j=0 ; i < data.length-1; i++){
         dif = Date.parse(data[i].date) - Date.parse(data[i+1].date);
         if(dif > day){
-            for( z = 0; z < dif/day; z++ ){
-                //для каждого показателя ( (data[i+1] - data[i]) * i / (dif/day) ) + data[i]
+            for( z = 1; z < dif/day; z++ ){
+                var obj = {};
+                //obj['date'] = Date.parse(data[i].date);  /*надо прибавить день к предыдущему */
+                // obj['date'] = new Date();
+                // obj['date'] = obj['date'].getDate()+1
+                obj['id'] = j;
+                //для каждого показателя ( (data[i+1] - data[i]) * i / (dif/day) + data[i]
+                $.each(data[i], function(index, value) {
+                    if(index != 'id' && index != 'date'){
+                        obj[index] = ( parseFloat(data[i+1][index]) - parseFloat(value) / (dif/day)) + parseFloat(data[i][index]);
+                    }
+                });
+                _data.push(obj);
+                j++;
             }
             console.log('difference is', dif/day, 'days');
         }else{ /*Разница в один день*/
-            _data[j] = data[i];
+            var obj = {};
+            obj['id'] = j;
+            $.each(data[i], function(index, value) {
+                    if(index != 'id' && index != 'date'){
+                        obj[index] = ( parseFloat(data[i+1][index]) - parseFloat(value) / (dif/day)) + parseFloat(data[i][index]);
+                    }
+                });
+            _data.push(obj);
             j++;
         }
     }
