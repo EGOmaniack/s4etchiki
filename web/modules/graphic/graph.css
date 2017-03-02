@@ -1,26 +1,3 @@
-* {
-  margin: 0;
-  padding: 0; 
-}
-html{
-width: 100%;
-  font-family: Verdana;
-  background: #ddd;
-}
-.main{
-    background-color: white;
-    margin: 12px auto;
-    padding: 12px 40px;
-    width: fit-content;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),
-  0 17px 50px 0 rgba(0,0,0,0.19);
-}
-svg {
-    border: 1px solid silver;
-    display: block;
-    background-color: white;
-    margin: 2px auto;
-}
 .form{
     background-color: white;
     width: fit-content;
@@ -28,10 +5,12 @@ svg {
     padding: 15px 60px;
     border: 1px solid silver;
 }
-.menu{
-    width: 440px;
-    padding: 3px 20px;
-    background-color: #7FB5D5;
+svg {
+    /*border: 1px solid silver;*/
+    display: block;
+    background-color: #F6FFFF;
+    margin: 2px auto;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.3);
 }
 .btn{
     border-radius: 15px;

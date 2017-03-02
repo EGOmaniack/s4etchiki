@@ -27,12 +27,6 @@ width: 100%;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24),
   0 17px 50px 0 rgba(0,0,0,0.19);
 }
-svg {
-    border: 1px solid silver;
-    display: block;
-    background-color: #EAFFFF;
-    margin: 2px auto;
-}
 .form{
     background-color: #FFFFFF;
     width: fit-content;
@@ -41,9 +35,10 @@ svg {
     border: 1px solid silver;
 }
 .menu{
-    width: 440px;
+    width: 500px;
     padding: 3px 20px;
     background-color: #7FB5FA;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.75);
 }
 .btn{
     width: 220px;
@@ -55,6 +50,7 @@ svg {
     text-align: center;
     text-decoration: none;
     display: block;
+    box-shadow: 1px 1px 15px 0 rgba(0,0,0,0.4);
     font-size: 20px;
     -webkit-transition-duration: 0.1s; /* Safari */
     transition-duration: 0.1s;
