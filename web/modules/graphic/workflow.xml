@@ -1,7 +1,7 @@
 <workflow>
     <graphic start="true" name="electrik">
         <readable val="Электричество"/>
-        <graphs graph1="light_day" graph2="light_night"/>
+        <graphs graph1="light_night" graph2="light_day"/>
         <orcestration init="electrik_init" />
         <state go_next ="water_kit"/>
     </graphic>
