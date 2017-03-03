@@ -3,6 +3,7 @@ include_once 'startmanager.php';
 //генерируем число
 $sek = strtotime("now");
 $js = '<script type="text/javascript" src = "js/main.js?'.$sek.'" ></script>';
+$storejs = '<script type="text/javascript" src = "js/store.js?'.$sek.'" ></script>';
 $css = '<link rel="stylesheet" href="css/main.css?'.$sek.'">';
 $castomcss;
 $castomjs;
@@ -32,6 +33,7 @@ $castomjs;
         <div id='content'></div>
         </div>
         <?=$js?>
+        <?=$storejs?>
         <?=$castomjs?>
         <?=$castomjs2?>
     </body>
